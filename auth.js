@@ -16,7 +16,7 @@ passport.use(new LocalStrategy(async (username, password, done)=>{
         return done(null, false, {message: "Incorrect Password"});
 
   }catch(err){
-    return done(error)
+    return done(err)
   }
 }));
 
